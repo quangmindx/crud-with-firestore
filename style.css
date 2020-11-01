@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #955df4;
+  --secondary-color: #ff816c;
+}
+.container {
+  max-width: 60rem;
+  margin: 2rem auto;
+  padding-bottom: 1rem;
+  -webkit-box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+  -moz-box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+  box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+}
+
+header {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 1rem;
+}
+
+.table__wrapper {
+  text-align: center;
+}
+header h3 {
+  color: #fff;
+  margin-left: 1.5rem;
+}
+
+.table__wrapper-users {
+  width: 90%;
+  margin: 2rem auto;
+  border-collapse: collapse;
+}
+
+.table__wrapper-users thead tr th,
+.table__wrapper-users tbody tr td {
+  text-align: left;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0.5rem;
+}
+
+.table__wrapper-users thead tr th {
+  background-color: #fafafa;
+  padding: 1rem auto;
+}
+
+.btn {
+  background: transparent;
+  width: 5rem;
+  height: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+.btn__edit {
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.btn__delete {
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+.btn__addUser {
+  width: 6rem;
+  height: 2rem;
+  background-color: var(--primary-color);
+  border: none;
+  color: #fff;
+}
+
+.btn__edit:hover {
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+.btn__delete:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Modal */
+
+.modal__wrapper {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #24232354;
+  display: none;
+}
+
+.modal {
+  position: relative;
+  background-color: #fff;
+  text-align: center;
+  width: 25rem;
+  margin: 5rem auto;
+  -webkit-box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+  -moz-box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+  box-shadow: 20px 15px 65px -10px rgba(51, 51, 51, 1);
+  animation-name: animatetop;
+  animation-duration: 0.5s;
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+.modal__header {
+  margin-bottom: 1rem;
+  background-color: #f8fafb;
+  padding: 2rem;
+}
+
+.modal__body {
+  padding: 2rem;
+}
+
+.btn__modal {
+  background-color: var(--primary-color);
+  border: none;
+  width: 9rem;
+  color: #fff;
+}
+.modal__body form input {
+  width: 100%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  text-indent: 0.5rem;
+  outline: none;
+}
+
+.modal__show {
+  display: block;
+}
